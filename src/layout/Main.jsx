@@ -14,7 +14,7 @@ class Main extends React.Component {
     }
 
     fetchOMDb() {
-        fetch('http://www.omdbapi.com/?apikey=b443c37f&s=matrix')
+        fetch('https://www.omdbapi.com/?apikey=b443c37f&s=matrix')
             .then((response) => response.json())
             .then((data) =>
                 this.setState({ movies: data.Search, loading: false })
@@ -24,7 +24,7 @@ class Main extends React.Component {
     searchMovies = (movieTitle, movieFilter) => {
         this.setState({ loading: true });
         fetch(
-            `http://www.omdbapi.com/?apikey=b443c37f&s=${movieTitle}${
+            `https://www.omdbapi.com/?apikey=b443c37f&s=${movieTitle}${
                 movieFilter !== 'all' ? `&type=${movieFilter}` : ``
             }`
         )
