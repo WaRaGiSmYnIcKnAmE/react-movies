@@ -23,6 +23,14 @@ class Search extends React.Component {
         this.props.searchMovies(this.state.search, this.state.filter);
     };
 
+    handleClickUp = () => {
+        //this.props.pageCountUp();
+    };
+
+    handleClickDown = () => {
+        //this.props.pageCountDown();
+    };
+
     render() {
         const { search, filter } = this.state;
 
@@ -101,6 +109,25 @@ class Search extends React.Component {
                         onClick={this.handleSearch}
                     >
                         Search
+                    </button>
+                </div>
+                <div className='row'>
+                    <div className='row'>
+                        <span>
+                            Total pages: {Math.round(this.props.total / 10)}
+                        </span>
+                    </div>
+                    <button
+                        className='btn left'
+                        onClick={this.handleClickDown()}
+                    >
+                        <i className='small material-icons'>chevron_left</i>
+                    </button>
+                    <button
+                        className='btn right'
+                        onClick={this.handleClickUp()}
+                    >
+                        <i className='small material-icons'>chevron_right</i>
                     </button>
                 </div>
             </div>
