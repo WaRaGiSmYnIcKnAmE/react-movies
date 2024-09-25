@@ -110,25 +110,9 @@ class Search extends React.Component {
                     >
                         Search
                     </button>
-                </div>
-                <div className='row'>
-                    <div className='row'>
-                        <span>
-                            Total pages: {Math.round(this.props.total / 10)}
-                        </span>
-                    </div>
-                    <button
-                        className='btn left'
-                        onClick={this.handleClickDown()}
-                    >
-                        <i className='small material-icons'>chevron_left</i>
-                    </button>
-                    <button
-                        className='btn right'
-                        onClick={this.handleClickUp()}
-                    >
-                        <i className='small material-icons'>chevron_right</i>
-                    </button>
+                    <span className='totalPages'>
+                        Total results: {this.props.total}
+                    </span>
                 </div>
             </div>
         );

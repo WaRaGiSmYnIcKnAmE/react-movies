@@ -27,3 +27,14 @@ code {
 .filter {
   margin: 1rem
 }
+
+.totalPages {
+  margin: 1rem
+}
+
+.currentPage {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: auto
+}
